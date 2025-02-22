@@ -1,0 +1,35 @@
+{% load static %}
+
+{% if messages %}
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times; </a>
+                    {{ message | safe|escape }}
+            </div>
+        {% elif message.tags == 'error' %}
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times; </a>
+                    {{ message| safe }}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if form.errors %}
+    <div class="alert alert-error">
+        <h4>Please fix the following errors</h4>
+        <ul>
+            {% for field in form %}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <li><a href="#id_{{ field.name }}" class="error">{{ error|escape }}</a></li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {% if form.non_field_errors %}
+            {{ form.non_field_errors }}
+        {% endif %}
+    </div>
+{% endif %}
