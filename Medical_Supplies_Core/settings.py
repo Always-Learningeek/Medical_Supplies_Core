@@ -30,6 +30,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
+    'blog.apps.BlogConfig',
+    'website.apps.WebsiteConfig',
+    'phonenumber_field',
+    'captcha'
 ]
 
 MIDDLEWARE = [
@@ -62,7 +66,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Medical_Supplies_Core.wsgi.application'
-
 
 
 # Password validation
@@ -103,8 +106,10 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+PHONENUMBER_DEFAULT_FORMAT = "NATIONAL"
+PHONENUMBER_DEFAULT_REGION = "IR"
