@@ -788,7 +788,8 @@
                         <h4 class="footer-title">خبرنامه</h4>
                         <p>با عضویت در خبرنامه ما از تمامی آپدیت ها و اخبار ها با خبر باشید.</p>
                         <div class="footer-newsletter">
-                            <form action="#">
+                            <form action="{% url 'website:newsletter' %}" method="post">
+                                {% csrf_token %}
                                 <input type="email" name="email" placeholder="ایمیل خود را وارد کنید*">
                                 <div class="btn-wrapper">
                                     <button class="theme-btn-1 btn" type="submit"><i
