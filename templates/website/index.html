@@ -1,27 +1,7 @@
-<!doctype html>
-<html class="no-js" lang="fa">
+{% extends 'base.html' %}
+{% load static %}
 
-
-<!-- Mirrored from theme.baitimo.ir/vicodin/demos/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Aug 2023 06:40:22 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>ویکودین - قالب html فروشگاه لوازم پزشکی</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Place favicon.png in the root directory -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <!-- Font Icons css -->
-    <link rel="stylesheet" href="css/font-icons.css">
-    <!-- plugins css -->
-    <link rel="stylesheet" href="css/plugins.css">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+{% block content %}
 
 <body>
     <!--[if lte IE 9]>
@@ -44,7 +24,7 @@
                                 <ul>
                                     <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i
                                                 class="icon-mail"></i> info@webmail.com</a></li>
-                                    <li><a href="locations.html"><i class="icon-placeholder"></i> خراسان رضوی،کاشمر،خیام
+                                    <li><a href="../locations.html"><i class="icon-placeholder"></i> خراسان رضوی،کاشمر،خیام
                                             4</a></li>
                                 </ul>
                             </div>
@@ -101,7 +81,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="site-logo">
-                                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                                <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
                             </div>
                         </div>
                         <div class="col header-contact-serarch-column d-none d-xl-block">
@@ -138,14 +118,14 @@
                                                 <li><a href="#" class="dropdown-toggle"><span
                                                             class="active-currency">USD</span></a>
                                                     <ul>
-                                                        <li><a href="login.html">USD - US Dollar</a></li>
-                                                        <li><a href="wishlist.html">CAD - Canada Dollar</a></li>
-                                                        <li><a href="register.html">EUR - Euro</a></li>
-                                                        <li><a href="account.html">GBP - British Pound</a></li>
-                                                        <li><a href="wishlist.html">INR - Indian Rupee</a></li>
-                                                        <li><a href="wishlist.html">BDT - Bangladesh Taka</a></li>
-                                                        <li><a href="wishlist.html">JPY - Japan Yen</a></li>
-                                                        <li><a href="wishlist.html">AUD - Australian Dollar</a></li>
+                                                        <li><a href="../login.html">USD - US Dollar</a></li>
+                                                        <li><a href="../wishlist.html">CAD - Canada Dollar</a></li>
+                                                        <li><a href="../register.html">EUR - Euro</a></li>
+                                                        <li><a href="../account.html">GBP - British Pound</a></li>
+                                                        <li><a href="../wishlist.html">INR - Indian Rupee</a></li>
+                                                        <li><a href="../wishlist.html">BDT - Bangladesh Taka</a></li>
+                                                        <li><a href="../wishlist.html">JPY - Japan Yen</a></li>
+                                                        <li><a href="../wishlist.html">AUD - Australian Dollar</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -178,10 +158,10 @@
                                                 <li>
                                                     <a href="#"><i class="icon-user"></i></a>
                                                     <ul>
-                                                        <li><a href="login.html">ورود</a></li>
-                                                        <li><a href="register.html">ثبت نام</a></li>
-                                                        <li><a href="account.html">حساب کاربری</a></li>
-                                                        <li><a href="wishlist.html">لیست علاقه مندی ها</a></li>
+                                                        <li><a href="../login.html">ورود</a></li>
+                                                        <li><a href="../register.html">ثبت نام</a></li>
+                                                        <li><a href="../account.html">حساب کاربری</a></li>
+                                                        <li><a href="../wishlist.html">لیست علاقه مندی ها</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -251,7 +231,7 @@
                                     <ul>
                                         <!-- Submenu Column - unlimited -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-shopping-bags"></i>سبد خرید</a>
+                                            <a href="../shop.html"><i class="icon-shopping-bags"></i>سبد خرید</a>
                                             <ul class="ltn__category-submenu ltn__category-column-5">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -337,7 +317,7 @@
                                         </li>
                                         <!-- Submenu Column - 4 -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-options"></i>تجهیزات پزشکی</a>
+                                            <a href="../shop.html"><i class="icon-options"></i>تجهیزات پزشکی</a>
                                             <ul class="ltn__category-submenu ltn__category-column-4">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -383,7 +363,7 @@
                                         </li>
                                         <!-- Submenu Column - 3 -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-award"></i>تجهیزات بیمارستان</a>
+                                            <a href="../shop.html"><i class="icon-award"></i>تجهیزات بیمارستان</a>
                                             <ul class="ltn__category-submenu ltn__category-column-3">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">اورژانس</a>
@@ -419,7 +399,7 @@
                                         </li>
                                         <!-- Submenu Column - 2 -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-user"></i>کرونا</a>
+                                            <a href="../shop.html"><i class="icon-user"></i>کرونا</a>
                                             <ul class="ltn__category-submenu ltn__category-column-2">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">مطب</a>
@@ -445,7 +425,7 @@
                                         </li>
                                         <!-- Submenu -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-shopping-cart"></i>طب سنتی</a>
+                                            <a href="../shop.html"><i class="icon-shopping-cart"></i>طب سنتی</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -461,7 +441,7 @@
                                         </li>
                                         <!-- Submenu -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-tag"></i>تجهیزات خانگی</a>
+                                            <a href="../shop.html"><i class="icon-tag"></i>تجهیزات خانگی</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -477,7 +457,7 @@
                                         </li>
                                         <!-- Submenu -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-shopping-bags"></i>جدیدترین محصولات</a>
+                                            <a href="../shop.html"><i class="icon-shopping-bags"></i>جدیدترین محصولات</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -493,7 +473,7 @@
                                         </li>
                                         <!-- Submenu -->
                                         <li class="ltn__category-menu-item ltn__category-menu-drop">
-                                            <a href="shop.html"><i class="icon-options"></i>محصولات بهداشتی</a>
+                                            <a href="../shop.html"><i class="icon-options"></i>محصولات بهداشتی</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -509,7 +489,7 @@
                                         </li>
                                         <!-- Show more menu -->
                                         <li class="ltn__category-menu-more-item-child">
-                                            <a href="shop.html"><i class="icon-shopping-bags"></i>تجهیزات بیهوشی</a>
+                                            <a href="../shop.html"><i class="icon-shopping-bags"></i>تجهیزات بیهوشی</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -524,7 +504,7 @@
                                             </ul>
                                         </li>
                                         <li class="ltn__category-menu-more-item-child">
-                                            <a href="shop.html"><i class="icon-options"></i>قابل حمل</a>
+                                            <a href="../shop.html"><i class="icon-options"></i>قابل حمل</a>
                                             <ul class="ltn__category-submenu">
                                                 <li class="ltn__category-submenu-title ltn__category-menu-drop"><a
                                                         href="#">عمومی</a>
@@ -563,51 +543,51 @@
                                                     <ul class="sub-menu menu-pages-img-show ltn__sub-menu-col-2---">
                                                         <li>
                                                             <a href="index.html">خانه طرح 1</a>
-                                                            <img src="img/home-demos/home-1.jpg" alt="#">
+                                                            <img src="{% static 'img/home-demos/home-1.jpg' %}" alt="#">
                                                         </li>
                                                         <li>
-                                                            <a href="index-2.html">خانه طرح 2</a>
-                                                            <img src="img/home-demos/home-2.jpg" alt="#">
+                                                            <a href="index.html">خانه طرح 2</a>
+                                                            <img src="{% static 'img/home-demos/home-2.jpg' %}" alt="#">
                                                         </li>
                                                         <li>
                                                             <a href="index-3.html">خانه طرح 3</a>
-                                                            <img src="img/home-demos/home-3.jpg" alt="#">
+                                                            <img src="{% static 'img/home-demos/home-3.jpg' %}" alt="#">
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-icon"><a href="#">درباره ما</a>
                                                     <ul>
-                                                        <li><a href="about.html">درباره ما</a></li>
-                                                        <li><a href="service.html">سرویس ها</a></li>
-                                                        <li><a href="service-details.html">جزئیات سرویس ها</a></li>
-                                                        <li><a href="portfolio.html">گالری نمونه کار</a></li>
-                                                        <li><a href="portfolio-2.html">گالری نمونه کار -2</a></li>
-                                                        <li><a href="portfolio-details.html">جزئیات نمونه کار</a></li>
-                                                        <li><a href="team.html">تیم</a></li>
-                                                        <li><a href="team-details.html">جزئیات تیم</a></li>
-                                                        <li><a href="faq.html">پرسش های متداول</a></li>
-                                                        <li><a href="locations.html">نمایندگی ها</a></li>
+                                                        <li><a href="../about.html">درباره ما</a></li>
+                                                        <li><a href="../service.html">سرویس ها</a></li>
+                                                        <li><a href="../service-details.html">جزئیات سرویس ها</a></li>
+                                                        <li><a href="../portfolio.html">گالری نمونه کار</a></li>
+                                                        <li><a href="../portfolio-2.html">گالری نمونه کار -2</a></li>
+                                                        <li><a href="../portfolio-details.html">جزئیات نمونه کار</a></li>
+                                                        <li><a href="../team.html">تیم</a></li>
+                                                        <li><a href="../team-details.html">جزئیات تیم</a></li>
+                                                        <li><a href="../faq.html">پرسش های متداول</a></li>
+                                                        <li><a href="../locations.html">نمایندگی ها</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-icon"><a href="#">فروشگاه</a>
                                                     <ul>
-                                                        <li><a href="shop.html">فروشگاه</a></li>
-                                                        <li><a href="shop-grid.html">فروشگاه شبکه ای</a></li>
-                                                        <li><a href="shop-left-sidebar.html">فروشگاه با سایدبار چپ</a>
+                                                        <li><a href="../shop.html">فروشگاه</a></li>
+                                                        <li><a href="../shop-grid.html">فروشگاه شبکه ای</a></li>
+                                                        <li><a href="../shop-left-sidebar.html">فروشگاه با سایدبار چپ</a>
                                                         </li>
-                                                        <li><a href="shop-right-sidebar.html">فروشگاه با سایدبار
+                                                        <li><a href="../shop-right-sidebar.html">فروشگاه با سایدبار
                                                                 راست</a></li>
-                                                        <li><a href="product-details.html">جزئیات محصول</a></li>
+                                                        <li><a href="../product-details.html">جزئیات محصول</a></li>
                                                         <li><a href="#">صفحات کاربری<span
                                                                     class="float-right">>></span></a>
                                                             <ul>
-                                                                <li><a href="cart.html">سبد خرید</a></li>
-                                                                <li><a href="wishlist.html">علاقه مندی ها</a></li>
-                                                                <li><a href="checkout.html">خرید</a></li>
-                                                                <li><a href="order-tracking.html">رهگیری سفارش</a></li>
-                                                                <li><a href="account.html">حساب کاربری</a></li>
-                                                                <li><a href="login.html">ورود</a></li>
-                                                                <li><a href="register.html">ثبت نام</a></li>
+                                                                <li><a href="../cart.html">سبد خرید</a></li>
+                                                                <li><a href="../wishlist.html">علاقه مندی ها</a></li>
+                                                                <li><a href="../checkout.html">خرید</a></li>
+                                                                <li><a href="../order-tracking.html">رهگیری سفارش</a></li>
+                                                                <li><a href="../account.html">حساب کاربری</a></li>
+                                                                <li><a href="../login.html">ورود</a></li>
+                                                                <li><a href="../register.html">ثبت نام</a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -615,57 +595,57 @@
                       
                                                 <li class="menu-icon"><a href="#">وبلاگ</a>
                                                     <ul>
-                                                        <li><a href="blog.html">وبلاگ</a></li>
-                                                        <li><a href="blog-grid.html">وبلاگ شبکه ای</a></li>
-                                                        <li><a href="blog-left-sidebar.html">وبلاگ با سایدبار چپ</a>
+                                                        <li><a href="../blog.html">وبلاگ</a></li>
+                                                        <li><a href="../blog-grid.html">وبلاگ شبکه ای</a></li>
+                                                        <li><a href="../blog-left-sidebar.html">وبلاگ با سایدبار چپ</a>
                                                         </li>
-                                                        <li><a href="blog-right-sidebar.html">وبلاگ با سایدبار راست</a>
+                                                        <li><a href="../blog-right-sidebar.html">وبلاگ با سایدبار راست</a>
                                                         </li>
-                                                        <li><a href="blog-details.html">جزئیات مطلب</a></li>
+                                                        <li><a href="../blog-details.html">جزئیات مطلب</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-icon"><a href="#">صفحات</a>
                                                     <ul class="mega-menu">
                                                         <li><a href="#">صفحات داخلی</a>
                                                             <ul>
-                                                                <li><a href="portfolio.html">گالری نمونه کار</a></li>
-                                                                <li><a href="portfolio-2.html">گالری نمونه کار -2</a>
+                                                                <li><a href="../portfolio.html">گالری نمونه کار</a></li>
+                                                                <li><a href="../portfolio-2.html">گالری نمونه کار -2</a>
                                                                 </li>
-                                                                <li><a href="portfolio-details.html">جزئیات نمونه
+                                                                <li><a href="../portfolio-details.html">جزئیات نمونه
                                                                         کار</a></li>
-                                                                <li><a href="team.html">تیم</a></li>
-                                                                <li><a href="team-details.html">جزئیات تیم</a></li>
-                                                                <li><a href="faq.html">پرسش های متداول</a></li>
+                                                                <li><a href="../team.html">تیم</a></li>
+                                                                <li><a href="../team-details.html">جزئیات تیم</a></li>
+                                                                <li><a href="../faq.html">پرسش های متداول</a></li>
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">صفحات داخلی</a>
                                                             <ul>
-                                                                <li><a href="history.html">سوابق</a></li>
-                                                                <li><a href="website/contact.html">سفارش</a></li>
-                                                                <li><a href="locations.html">نمایندگی ها</a></li>
-                                                                <li><a href="404.html">404</a></li>
-                                                                <li><a href="website/contact.html">ارتباط با ما</a></li>
-                                                                <li><a href="coming-soon.html">به زودی</a></li>
+                                                                <li><a href="../history.html">سوابق</a></li>
+                                                                <li><a href="contact.html">سفارش</a></li>
+                                                                <li><a href="../locations.html">نمایندگی ها</a></li>
+                                                                <li><a href="../404.html">404</a></li>
+                                                                <li><a href="contact.html">ارتباط با ما</a></li>
+                                                                <li><a href="../coming-soon.html">به زودی</a></li>
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">صفحات فروشگاه</a>
                                                             <ul>
-                                                                <li><a href="shop.html">فروشگاه</a></li>
-                                                                <li><a href="shop-left-sidebar.html">فروشگاه با سایدبار
+                                                                <li><a href="../shop.html">فروشگاه</a></li>
+                                                                <li><a href="../shop-left-sidebar.html">فروشگاه با سایدبار
                                                                         چپ</a></li>
-                                                                <li><a href="shop-right-sidebar.html">فروشگاه با سایدبار
+                                                                <li><a href="../shop-right-sidebar.html">فروشگاه با سایدبار
                                                                         راست</a></li>
-                                                                <li><a href="shop-grid.html">فروشگاه شبکه ای</a></li>
-                                                                <li><a href="product-details.html">جزئیات محصول</a></li>
-                                                                <li><a href="cart.html">سبد خرید</a></li>
+                                                                <li><a href="../shop-grid.html">فروشگاه شبکه ای</a></li>
+                                                                <li><a href="../product-details.html">جزئیات محصول</a></li>
+                                                                <li><a href="../cart.html">سبد خرید</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="shop.html"><img src="img/banner/menu-banner-1.png"
-                                                                    alt="#"></a>
+                                                        <li><a href="../shop.html"><img src="{% static 'img/banner/menu-banner-1.png' %}"
+                                                                                        alt="#"></a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="website/contact.html">ارتباط با ما</a></li>
+                                                <li><a href="contact.html">ارتباط با ما</a></li>
                                             </ul>
                                         </div>
                                     </nav>
@@ -697,7 +677,7 @@
                 <div class="mini-cart-product-area ltn__scrollbar">
                     <div class="mini-cart-item clearfix">
                         <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/1.png" alt="Image"></a>
+                            <a href="#"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
                             <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
                         </div>
                         <div class="mini-cart-info">
@@ -707,7 +687,7 @@
                     </div>
                     <div class="mini-cart-item clearfix">
                         <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/2.png" alt="Image"></a>
+                            <a href="#"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
                             <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
                         </div>
                         <div class="mini-cart-info">
@@ -717,7 +697,7 @@
                     </div>
                     <div class="mini-cart-item clearfix">
                         <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/3.png" alt="Image"></a>
+                            <a href="#"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
                             <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
                         </div>
                         <div class="mini-cart-info">
@@ -727,7 +707,7 @@
                     </div>
                     <div class="mini-cart-item clearfix">
                         <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/4.png" alt="Image"></a>
+                            <a href="#"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
                             <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
                         </div>
                         <div class="mini-cart-info">
@@ -741,8 +721,8 @@
                         <h5>جمع کل:<span>848،000 تومان</span></h5>
                     </div>
                     <div class="btn-wrapper">
-                        <a href="cart.html" class="theme-btn-1 btn btn-effect-1">مشاهده سبد خرید</a>
-                        <a href="cart.html" class="theme-btn-2 btn btn-effect-2">پرداخت</a>
+                        <a href="../cart.html" class="theme-btn-1 btn btn-effect-1">مشاهده سبد خرید</a>
+                        <a href="../cart.html" class="theme-btn-2 btn btn-effect-2">پرداخت</a>
                     </div>
                     <p>امروزت رو با 23% تخفیف شروع کن!!</p>
                 </div>
@@ -757,7 +737,7 @@
             <div class="ltn__utilize-menu-inner ltn__scrollbar">
                 <div class="ltn__utilize-menu-head">
                     <div class="site-logo">
-                        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                        <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
                     </div>
                     <button class="ltn__utilize-close">×</button>
                 </div>
@@ -772,79 +752,79 @@
                         <li><a href="#">خانه</a>
                             <ul class="sub-menu">
                                 <li><a href="index.html">خانه 1</a></li>
-                                <li><a href="index-2.html">خانه 2</a></li>
+                                <li><a href="index.html">خانه 2</a></li>
                                 <li><a href="index-3.html">خانه 3</a></li>
                             </ul>
                         </li>
                         <li><a href="#">درباره ما</a>
                             <ul class="sub-menu">
-                                <li><a href="about.html">درباره ما</a></li>
-                                <li><a href="service.html">سرویس ها</a></li>
-                                <li><a href="service-details.html">جزئیات سرویس ها</a></li>
-                                <li><a href="portfolio.html">گالری نمونه کار</a></li>
-                                <li><a href="portfolio-2.html">گالری نمونه کار -2</a></li>
-                                <li><a href="portfolio-details.html">جزئیات نمونه کار</a></li>
-                                <li><a href="team.html">تیم</a></li>
-                                <li><a href="team-details.html">جزئیات تیم</a></li>
-                                <li><a href="faq.html">پرسش های متداول</a></li>
-                                <li><a href="locations.html">نمایندگی ها</a></li>
+                                <li><a href="../about.html">درباره ما</a></li>
+                                <li><a href="../service.html">سرویس ها</a></li>
+                                <li><a href="../service-details.html">جزئیات سرویس ها</a></li>
+                                <li><a href="../portfolio.html">گالری نمونه کار</a></li>
+                                <li><a href="../portfolio-2.html">گالری نمونه کار -2</a></li>
+                                <li><a href="../portfolio-details.html">جزئیات نمونه کار</a></li>
+                                <li><a href="../team.html">تیم</a></li>
+                                <li><a href="../team-details.html">جزئیات تیم</a></li>
+                                <li><a href="../faq.html">پرسش های متداول</a></li>
+                                <li><a href="../locations.html">نمایندگی ها</a></li>
                             </ul>
                         </li>
                         <li><a href="#">فروشگاه</a>
                             <ul class="sub-menu">
-                                <li><a href="shop.html">فروشگاه</a></li>
-                                <li><a href="shop-grid.html">فروشگاه شبکه ای</a></li>
-                                <li><a href="shop-left-sidebar.html">فروشگاه با سایدبار چپ</a></li>
-                                <li><a href="shop-right-sidebar.html">فروشگاه با سایدبار راست</a></li>
-                                <li><a href="product-details.html">جزئیات محصول</a></li>
+                                <li><a href="../shop.html">فروشگاه</a></li>
+                                <li><a href="../shop-grid.html">فروشگاه شبکه ای</a></li>
+                                <li><a href="../shop-left-sidebar.html">فروشگاه با سایدبار چپ</a></li>
+                                <li><a href="../shop-right-sidebar.html">فروشگاه با سایدبار راست</a></li>
+                                <li><a href="../product-details.html">جزئیات محصول</a></li>
                                 <li><a href="#">صفحات کاربری<span class="float-right">>></span></a>
                                     <ul>
-                                        <li><a href="cart.html">سبد خرید</a></li>
-                                        <li><a href="wishlist.html">علاقه مندی ها</a></li>
-                                        <li><a href="checkout.html">خرید</a></li>
-                                        <li><a href="order-tracking.html">رهگیری سفارش</a></li>
-                                        <li><a href="account.html">حساب کاربری</a></li>
-                                        <li><a href="login.html">ورود</a></li>
-                                        <li><a href="register.html">ثبت نام</a></li>
+                                        <li><a href="../cart.html">سبد خرید</a></li>
+                                        <li><a href="../wishlist.html">علاقه مندی ها</a></li>
+                                        <li><a href="../checkout.html">خرید</a></li>
+                                        <li><a href="../order-tracking.html">رهگیری سفارش</a></li>
+                                        <li><a href="../account.html">حساب کاربری</a></li>
+                                        <li><a href="../login.html">ورود</a></li>
+                                        <li><a href="../register.html">ثبت نام</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li><a href="#">وبلاگ</a>
                             <ul class="sub-menu">
-                                <li><a href="blog.html">وبلاگ</a></li>
-                                <li><a href="blog-grid.html">وبلاگ شبکه ای</a></li>
-                                <li><a href="blog-left-sidebar.html">وبلاگ با سایدبار چپ</a></li>
-                                <li><a href="blog-right-sidebar.html">وبلاگ با سایدبار راست</a></li>
-                                <li><a href="blog-details.html">جزئیات مطلب وبلاگ</a></li>
+                                <li><a href="../blog.html">وبلاگ</a></li>
+                                <li><a href="../blog-grid.html">وبلاگ شبکه ای</a></li>
+                                <li><a href="../blog-left-sidebar.html">وبلاگ با سایدبار چپ</a></li>
+                                <li><a href="../blog-right-sidebar.html">وبلاگ با سایدبار راست</a></li>
+                                <li><a href="../blog-details.html">جزئیات مطلب وبلاگ</a></li>
                             </ul>
                         </li>
                         <li><a href="#">صفحات</a>
                             <ul class="sub-menu">
-                                <li><a href="about.html">درباره ما</a></li>
-                                <li><a href="service.html">سرویس ها</a></li>
-                                <li><a href="service-details.html">جزئیات سرویس</a></li>
-                                <li><a href="portfolio.html">نمونه کار</a></li>
-                                <li><a href="portfolio-2.html">نمونه کار -2</a></li>
-                                <li><a href="portfolio-details.html">جزئیات نمونه کار</a></li>
-                                <li><a href="team.html">تیم</a></li>
-                                <li><a href="team-details.html">جزئیات تیم</a></li>
-                                <li><a href="faq.html">پرسش های متداول</a></li>
-                                <li><a href="history.html">سوابق</a></li>
-                                <li><a href="account.html">حساب کاربری</a></li>
-                                <li><a href="locations.html">نمایندگی ها</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="website/contact.html">ارتباط با ما</a></li>
-                                <li><a href="coming-soon.html">به زودی</a></li>
+                                <li><a href="../about.html">درباره ما</a></li>
+                                <li><a href="../service.html">سرویس ها</a></li>
+                                <li><a href="../service-details.html">جزئیات سرویس</a></li>
+                                <li><a href="../portfolio.html">نمونه کار</a></li>
+                                <li><a href="../portfolio-2.html">نمونه کار -2</a></li>
+                                <li><a href="../portfolio-details.html">جزئیات نمونه کار</a></li>
+                                <li><a href="../team.html">تیم</a></li>
+                                <li><a href="../team-details.html">جزئیات تیم</a></li>
+                                <li><a href="../faq.html">پرسش های متداول</a></li>
+                                <li><a href="../history.html">سوابق</a></li>
+                                <li><a href="../account.html">حساب کاربری</a></li>
+                                <li><a href="../locations.html">نمایندگی ها</a></li>
+                                <li><a href="../404.html">404</a></li>
+                                <li><a href="contact.html">ارتباط با ما</a></li>
+                                <li><a href="../coming-soon.html">به زودی</a></li>
                             </ul>
                         </li>
-                        <li><a href="website/contact.html">ارتباط با ما</a></li>
+                        <li><a href="contact.html">ارتباط با ما</a></li>
                     </ul>
                 </div>
                 <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
                     <ul>
                         <li>
-                            <a href="account.html" title="My Account">
+                            <a href="../account.html" title="My Account">
                                 <span class="utilize-btn-icon">
                                     <i class="far fa-user"></i>
                                 </span>
@@ -852,7 +832,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" title="Wishlist">
+                            <a href="../wishlist.html" title="Wishlist">
                                 <span class="utilize-btn-icon">
                                     <i class="far fa-heart"></i>
                                     <sup>3</sup>
@@ -861,7 +841,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="cart.html" title="Shoping Cart">
+                            <a href="../cart.html" title="Shoping Cart">
                                 <span class="utilize-btn-icon">
                                     <i class="fas fa-shopping-cart"></i>
                                     <sup>5</sup>
@@ -893,7 +873,7 @@
                         <div class="ltn__slide-active-2 slick-slide-arrow-1 slick-slide-dots-1 mb-30">
                             <!-- ltn__slide-item -->
                             <div class="ltn__slide-item ltn__slide-item-10 section-bg-1 bg-image"
-                                data-bs-bg="img/slider/71.jpg">
+                                data-bs-bg="img/slider/71.jpg' %}">
                                 <div class="ltn__slide-item-inner">
                                     <div class="container">
                                         <div class="row">
@@ -912,7 +892,7 @@
                                                         </div>
                                                         <h5 class="color-orange  animated">شروع از 200 هزارتومان</h5>
                                                         <div class="btn-wrapper  animated">
-                                                            <a href="shop.html" class="theme-btn-1 btn btn-effect-1">بزن
+                                                            <a href="../shop.html" class="theme-btn-1 btn btn-effect-1">بزن
                                                                 بریم!</a>
                                                         </div>
                                                     </div>
@@ -920,7 +900,7 @@
                                             </div>
                                             <div class="col-lg-5 col-md-5 col-sm-5 align-self-center">
                                                 <div class="slide-item-img">
-                                                    <!-- <a href="shop.html"><img src="img/product/1.png" alt="Image"></a> -->
+                                                    <!-- <a href="shop.html"><img src="{% static 'img/product/1.png' %}" alt="Image"></a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -929,7 +909,7 @@
                             </div>
                             <!-- ltn__slide-item -->
                             <div class="ltn__slide-item ltn__slide-item-10 section-bg-1 bg-image"
-                                data-bs-bg="img/slider/62.jpg">
+                                data-bs-bg="img/slider/62.jpg' %}">
                                 <div class="ltn__slide-item-inner">
                                     <div class="container">
                                         <div class="row">
@@ -948,7 +928,7 @@
                                                             </p>
                                                         </div>
                                                         <div class="btn-wrapper  animated">
-                                                            <a href="shop.html"
+                                                            <a href="../shop.html"
                                                                 class="theme-btn-1 btn btn-effect-1 text-uppercase">بزن
                                                                 بریم</a>
                                                         </div>
@@ -957,7 +937,7 @@
                                             </div>
                                             <div class="col-lg-5 col-md-5 col-sm-5 align-self-center">
                                                 <div class="slide-item-img">
-                                                    <!-- <a href="shop.html"><img src="img/slider/62.jpg" alt="Image"></a> -->
+                                                    <!-- <a href="shop.html"><img src="{% static 'img/slider/62.jpg' %}" alt="Image"></a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -969,12 +949,12 @@
                     <div class="col-lg-5">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="img/banner/17.jpg" alt="Banner Image"></a>
+                                <a href="../shop.html"><img src="{% static 'img/banner/17.jpg' %}" alt="Banner Image"></a>
                             </div>
                         </div>
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="img/banner/18.jpg" alt="Banner Image"></a>
+                                <a href="../shop.html"><img src="{% static 'img/banner/18.jpg' %}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
@@ -990,120 +970,120 @@
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-notes-medical"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">بهترین معاملات</a></h6>
+                                <h6><a href="../shop.html">بهترین معاملات</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-box-tissue"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">پد میکروب</a></h6>
+                                <h6><a href="../shop.html">پد میکروب</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-pump-medical"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">تجهیزات جانبی</a></h6>
+                                <h6><a href="../shop.html">تجهیزات جانبی</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-bong"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">سرپوش پزشکی</a></h6>
+                                <h6><a href="../shop.html">سرپوش پزشکی</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-tooth"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">تجهیزات دندانپزشکی</a></h6>
+                                <h6><a href="../shop.html">تجهیزات دندانپزشکی</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-microscope"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">تجهیزات آزمایشگاهی</a></h6>
+                                <h6><a href="../shop.html">تجهیزات آزمایشگاهی</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-syringe"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">همه لوازم</a></h6>
+                                <h6><a href="../shop.html">همه لوازم</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-stethoscope"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">عمومی</a></h6>
+                                <h6><a href="../shop.html">عمومی</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-hand-holding-medical"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">اورژانس</a></h6>
+                                <h6><a href="../shop.html">اورژانس</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="ltn__category-item ltn__category-item-6 text-center">
                             <div class="ltn__category-item-img">
-                                <a href="shop.html">
+                                <a href="../shop.html">
                                     <i class="fas fa-procedures"></i>
                                 </a>
                             </div>
                             <div class="ltn__category-item-name">
-                                <h6><a href="shop.html">تجهیزات اتاق درمان</a></h6>
+                                <h6><a href="../shop.html">تجهیزات اتاق درمان</a></h6>
                             </div>
                         </div>
                     </div>
@@ -1128,14 +1108,14 @@
                             <div class="col-lg-12 col-sm-6">
                                 <div class="ltn__banner-item">
                                     <div class="ltn__banner-img">
-                                        <a href="shop.html"><img src="img/banner/11.jpg" alt="Banner Image"></a>
+                                        <a href="../shop.html"><img src="{% static 'img/banner/11.jpg' %}" alt="Banner Image"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-sm-6">
                                 <div class="ltn__banner-item">
                                     <div class="ltn__banner-img">
-                                        <a href="shop.html"><img src="img/banner/12.jpg" alt="Banner Image"></a>
+                                        <a href="../shop.html"><img src="{% static 'img/banner/12.jpg' %}" alt="Banner Image"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1147,7 +1127,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/1.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">جدید</li>
@@ -1185,7 +1165,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">اسپری ضد عفونی
+                                        <h2 class="product-title"><a href="../product-details.html">اسپری ضد عفونی
                                                 کننده</a></h2>
                                         <div class="product-price">
                                             <span>32،000 تومان</span>
@@ -1198,7 +1178,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/2.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
                                         <div class="product-hover-action">
                                             <ul>
                                                 <li>
@@ -1231,7 +1211,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">گوشی پزشکی دیجیتال</a>
+                                        <h2 class="product-title"><a href="../product-details.html">گوشی پزشکی دیجیتال</a>
                                         </h2>
                                         <div class="product-price">
                                             <span>25،000 تومان</span>
@@ -1244,7 +1224,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/3.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">جدید</li>
@@ -1282,7 +1262,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">کیف لوازم آرایش</a>
+                                        <h2 class="product-title"><a href="../product-details.html">کیف لوازم آرایش</a>
                                         </h2>
                                         <div class="product-price">
                                             <span>75،000 تومان</span>
@@ -1295,7 +1275,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/4.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">جدید</li>
@@ -1333,7 +1313,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">بسته ماسک N95</a></h2>
+                                        <h2 class="product-title"><a href="../product-details.html">بسته ماسک N95</a></h2>
                                         <div class="product-price">
                                             <span>100،000تومان</span>
                                             <del>110،000 تومان</del>
@@ -1345,7 +1325,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/5.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/5.png' %}" alt="#"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">جدید</li>
@@ -1383,7 +1363,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">دستکش یک بار مصرف</a>
+                                        <h2 class="product-title"><a href="../product-details.html">دستکش یک بار مصرف</a>
                                         </h2>
                                         <div class="product-price">
                                             <span>10،000 تومان</span>
@@ -1396,7 +1376,7 @@
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
                                 <div class="ltn__product-item ltn__product-item-2 text-left">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product/6.png" alt="#"></a>
+                                        <a href="../product-details.html"><img src="{% static 'img/product/6.png' %}" alt="#"></a>
                                         <div class="product-badge">
                                             <ul>
                                                 <li class="sale-badge">جدید</li>
@@ -1434,7 +1414,7 @@
                                                 <li><a href="#"><i class="far fa-star"></i></a></li>
                                             </ul>
                                         </div>
-                                        <h2 class="product-title"><a href="product-details.html">دستگاه لیزر جراحی</a>
+                                        <h2 class="product-title"><a href="../product-details.html">دستگاه لیزر جراحی</a>
                                         </h2>
                                         <div class="product-price">
                                             <span>150 میلیون تومان</span>
@@ -1452,7 +1432,7 @@
         <!-- PRODUCT AREA END -->
 
         <!-- COUNTDOWN AREA START -->
-        <div class="ltn__call-to-action-area section-bg-1 bg-image pt-120 pb-120" data-bs-bg="img/bg/25.jpg">
+        <div class="ltn__call-to-action-area section-bg-1 bg-image pt-120 pb-120" data-bs-bg="img/bg/25.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
@@ -1465,15 +1445,15 @@
                             </div>
                             <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2024/12/28"></div>
                             <div class="btn-wrapper animated">
-                                <a href="website/contact.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">خرید هم
+                                <a href="contact.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">خرید هم
                                     اکنون</a>
-                                <a href="shop.html" class="ltn__secondary-color text-decoration-underline">معاملات
+                                <a href="../shop.html" class="ltn__secondary-color text-decoration-underline">معاملات
                                     امروز</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
-                        <!-- <img src="img/banner/15.png" alt="#"> -->
+                        <!-- <img src="{% static 'img/banner/15.png' %}" alt="#"> -->
                     </div>
                 </div>
             </div>
@@ -1495,7 +1475,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/1.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1533,7 +1513,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">اسپری ضد عفونی کننده</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">اسپری ضد عفونی کننده</a></h2>
                                 <div class="product-price">
                                     <span>32،000تومان</span>
                                     <del>46،000تومان</del>
@@ -1545,7 +1525,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/2.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1583,7 +1563,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">گوشی پزشکی</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">گوشی پزشکی</a></h2>
                                 <div class="product-price">
                                     <span>1،000،000تومان</span>
                                 </div>
@@ -1594,7 +1574,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/3.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1632,7 +1612,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه تحویه هوا</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه تحویه هوا</a></h2>
                                 <div class="product-price">
                                     <span>1،100،000تومان</span>
                                     <del>1،230،000تومان</del>
@@ -1644,7 +1624,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/4.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1682,7 +1662,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه فشار سنج</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه فشار سنج</a></h2>
                                 <div class="product-price">
                                     <span>2،000،000تومان</span>
                                     <del>2،740،000تومان</del>
@@ -1694,7 +1674,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/1.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1732,7 +1712,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">اسپری ضد عفونی کننده</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">اسپری ضد عفونی کننده</a></h2>
                                 <div class="product-price">
                                     <span>32،000تومان</span>
                                     <del>46،000تومان</del>
@@ -1744,7 +1724,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/2.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1782,7 +1762,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">گوشی پزشکی</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">گوشی پزشکی</a></h2>
                                 <div class="product-price">
                                     <span>1،000،000تومان</span>
                                 </div>
@@ -1793,7 +1773,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/3.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1831,7 +1811,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه تحویه هوا</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه تحویه هوا</a></h2>
                                 <div class="product-price">
                                     <span>1،100،000تومان</span>
                                     <del>1،230،000تومان</del>
@@ -1843,7 +1823,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-center">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product/4.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/4.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -1881,7 +1861,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه فشار سنج</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه فشار سنج</a></h2>
                                 <div class="product-price">
                                     <span>2،000،000تومان</span>
                                     <del>2،740،000تومان</del>
@@ -1902,21 +1882,21 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="img/banner/22.jpg" alt="Banner Image"></a>
+                                <a href="../shop.html"><img src="{% static 'img/banner/22.jpg' %}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="img/banner/21.jpg" alt="Banner Image"></a>
+                                <a href="../shop.html"><img src="{% static 'img/banner/21.jpg' %}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="ltn__banner-item">
                             <div class="ltn__banner-img">
-                                <a href="shop.html"><img src="img/banner/23.jpg" alt="Banner Image"></a>
+                                <a href="../shop.html"><img src="{% static 'img/banner/23.jpg' %}" alt="Banner Image"></a>
                             </div>
                         </div>
                     </div>
@@ -1940,7 +1920,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/1.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -1952,7 +1932,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">ژل ضد عفونی کننده</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">ژل ضد عفونی کننده</a></h2>
                                 <div class="product-price">
                                     <span>129،000تومان</span>
                                     <del>140،000تومان</del>
@@ -1964,7 +1944,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/2.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -1976,7 +1956,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">گوشی پزشکی</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">گوشی پزشکی</a></h2>
                                 <div class="product-price">
                                     <span>145،000تومان</span>
                                     <del>155،000تومان</del>
@@ -1988,7 +1968,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/3.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2000,7 +1980,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه تسویه هوا</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه تسویه هوا</a></h2>
                                 <div class="product-price">
 
                                     <span>735،000تومان</span>
@@ -2013,7 +1993,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/4.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2025,7 +2005,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه فشار سنج</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه فشار سنج</a></h2>
                                 <div class="product-price">
 
                                     <span>920،000تومان</span>
@@ -2038,7 +2018,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/5.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/5.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2050,7 +2030,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستکش یکبار مصرف</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستکش یکبار مصرف</a></h2>
                                 <div class="product-price">
 
                                     <span>140،000تومان</span>
@@ -2063,7 +2043,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/6.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/6.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2075,7 +2055,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">تب سنج دیجیتال<a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">تب سنج دیجیتال</a></h2>
                                 <div class="product-price">
 
                                     <span>350،000تومان</span>
@@ -2088,7 +2068,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/7.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/7.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2100,7 +2080,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">ماسک چهار لایه</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">ماسک چهار لایه</a></h2>
                                 <div class="product-price">
 
                                     <span>130،000تومان</span>
@@ -2113,7 +2093,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/8.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/8.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2125,7 +2105,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">اسپری ضد عفونی کننده</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">اسپری ضد عفونی کننده</a></h2>
                                 <div class="product-price">
 
                                     <span>180،000تومان</span>
@@ -2138,7 +2118,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="ltn__small-product-item">
                             <div class="small-product-item-img">
-                                <a href="product-details.html"><img src="img/product/9.png" alt="Image"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product/9.png' %}" alt="Image"></a>
                             </div>
                             <div class="small-product-item-info">
                                 <div class="product-ratting">
@@ -2150,7 +2130,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه LP11</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه LP11</a></h2>
                                 <div class="product-price">
 
                                     <span>340،000تومان</span>
@@ -2180,7 +2160,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/1.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/1.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2218,7 +2198,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">اسپری ضد عفونی کننده</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">اسپری ضد عفونی کننده</a></h2>
                                 <div class="product-price">
                                     <span>32،000تومان</span>
                                     <del>46،000تومان</del>
@@ -2230,7 +2210,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/2.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/2.png' %}" alt="#"></a>
                                 <div class="product-hover-action">
                                     <ul>
                                         <li>
@@ -2263,7 +2243,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">گوشی پزشکی</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">گوشی پزشکی</a></h2>
                                 <div class="product-price">
                                     <span>195،000تومان</span>
                                     <del>205،000تومان</del>
@@ -2275,7 +2255,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/3.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/3.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2313,7 +2293,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه فشار سنج</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه فشار سنج</a></h2>
                                 <div class="product-price">
                                     <span>2،000،000تومان</span>
                                     <del>2،300،000تومان</del>
@@ -2325,7 +2305,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/4.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/4.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2363,7 +2343,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">ماسک سه لایه</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">ماسک سه لایه</a></h2>
                                 <div class="product-price">
                                     <span>78،000تومان</span>
                                     <del>83،000تومان</del>
@@ -2375,7 +2355,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/5.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/5.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2413,7 +2393,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستکش یکبار مصرف</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستکش یکبار مصرف</a></h2>
                                 <div class="product-price">
                                     <span>150،000تومان</span>
                                     <del>163،000تومان</del>
@@ -2425,7 +2405,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/8.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/8.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2463,7 +2443,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">گان محافظت عفونی</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">گان محافظت عفونی</a></h2>
                                 <div class="product-price">
                                     <span>350،000تومان</span>
                                     <del>370،000تومان</del>
@@ -2475,7 +2455,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/7.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/7.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2513,7 +2493,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">دستگاه دیابت سنج</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">دستگاه دیابت سنج</a></h2>
                                 <div class="product-price">
                                     <span>4،320،000تومان</span>
                                 </div>
@@ -2524,7 +2504,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="ltn__product-item ltn__product-item-3 text-left">
                             <div class="product-img">
-                                <a href="product-details.html"><img src="img/product-2/8.png" alt="#"></a>
+                                <a href="../product-details.html"><img src="{% static 'img/product-2/8.png' %}" alt="#"></a>
                                 <div class="product-badge">
                                     <ul>
                                         <li class="sale-badge">جدید</li>
@@ -2562,7 +2542,7 @@
                                         <li><a href="#"><i class="far fa-star"></i></a></li>
                                     </ul>
                                 </div>
-                                <h2 class="product-title"><a href="product-details.html">میکروسکوپ k50</a></h2>
+                                <h2 class="product-title"><a href="../product-details.html">میکروسکوپ k50</a></h2>
                                 <div class="product-price">
                                     <span>780،000تومان</span>
                                     <del>820،000تومان</del>
@@ -2577,12 +2557,12 @@
         <!-- PRODUCT AREA END -->
 
         <!-- ABOUT US AREA START -->
-        <div class="ltn__about-us-area bg-image pt-115 pb-110" data-bs-bg="img/bg/26.jpg">
+        <div class="ltn__about-us-area bg-image pt-115 pb-110" data-bs-bg="img/bg/26.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
                         <div class="about-us-img-wrap about-img-left">
-                            <!-- <img src="img/others/7.png" alt="About Us Image"> -->
+                            <!-- <img src="{% static 'img/others/7.png' %}" alt="About Us Image"> -->
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-center">
@@ -2616,7 +2596,7 @@
                                 </li>
                             </ul>
                             <div class="btn-wrapper animated">
-                                <a href="service.html"
+                                <a href="../service.html"
                                     class="ltn__secondary-color text-uppercase text-decoration-underline">مشاهده
                                     محصولات</a>
                             </div>
@@ -2643,7 +2623,7 @@
                     <div class="col-lg-12">
                         <div class="ltn__blog-item ltn__blog-item-3">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="img/blog/1.jpg" alt="#"></a>
+                                <a href="../blog-details.html"><img src="{% static 'img/blog/1.jpg' %}" alt="#"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -2656,7 +2636,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">10 کاری که قبل از طراحی باید
+                                <h3 class="ltn__blog-title"><a href="../blog-details.html">10 کاری که قبل از طراحی باید
                                         کرد</a></h3>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
@@ -2666,7 +2646,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html">اطلاعات بیشتر</a>
+                                        <a href="../blog-details.html">اطلاعات بیشتر</a>
                                     </div>
                                 </div>
                             </div>
@@ -2676,7 +2656,7 @@
                     <div class="col-lg-12">
                         <div class="ltn__blog-item ltn__blog-item-3">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="img/blog/2.jpg" alt="#"></a>
+                                <a href="../blog-details.html"><img src="{% static 'img/blog/2.jpg' %}" alt="#"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -2689,7 +2669,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">اینکار را اگر بکنید دندان های
+                                <h3 class="ltn__blog-title"><a href="../blog-details.html">اینکار را اگر بکنید دندان های
                                         شما دیر تر خراب میشوند</a></h3>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
@@ -2699,7 +2679,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html">اطلاعات بیشتر</a>
+                                        <a href="../blog-details.html">اطلاعات بیشتر</a>
                                     </div>
                                 </div>
                             </div>
@@ -2709,7 +2689,7 @@
                     <div class="col-lg-12">
                         <div class="ltn__blog-item ltn__blog-item-3">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="img/blog/3.jpg" alt="#"></a>
+                                <a href="../blog-details.html"><img src="{% static 'img/blog/3.jpg' %}" alt="#"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -2722,7 +2702,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">اگر شب های نمیخوابید با این
+                                <h3 class="ltn__blog-title"><a href="../blog-details.html">اگر شب های نمیخوابید با این
                                         راهکار بخوابید!</a></h3>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
@@ -2732,7 +2712,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html">اطلاعات بیشتر</a>
+                                        <a href="../blog-details.html">اطلاعات بیشتر</a>
                                     </div>
                                 </div>
                             </div>
@@ -2742,7 +2722,7 @@
                     <div class="col-lg-12">
                         <div class="ltn__blog-item ltn__blog-item-3">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="img/blog/4.jpg" alt="#"></a>
+                                <a href="../blog-details.html"><img src="{% static 'img/blog/4.jpg' %}" alt="#"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -2755,7 +2735,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">چند راهکار برای رفع خستگی
+                                <h3 class="ltn__blog-title"><a href="../blog-details.html">چند راهکار برای رفع خستگی
                                         چشم</a></h3>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
@@ -2765,7 +2745,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html">اطلاعات بیشتر</a>
+                                        <a href="../blog-details.html">اطلاعات بیشتر</a>
                                     </div>
                                 </div>
                             </div>
@@ -2775,7 +2755,7 @@
                     <div class="col-lg-12">
                         <div class="ltn__blog-item ltn__blog-item-3">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="img/blog/1.jpg" alt="#"></a>
+                                <a href="../blog-details.html"><img src="{% static 'img/blog/1.jpg' %}" alt="#"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -2788,7 +2768,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">10 کاری که قبل از طراحی باید
+                                <h3 class="ltn__blog-title"><a href="../blog-details.html">10 کاری که قبل از طراحی باید
                                         کرد</a></h3>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
@@ -2798,7 +2778,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html">اطلاعات بیشتر</a>
+                                        <a href="../blog-details.html">اطلاعات بیشتر</a>
                                     </div>
                                 </div>
                             </div>
@@ -2819,7 +2799,7 @@
                             class="ltn__feature-item-box-wrap ltn__feature-item-box-wrap-2 ltn__border--- section-bg-1">
                             <div class="ltn__feature-item ltn__feature-item-8">
                                 <div class="ltn__feature-icon">
-                                    <img src="img/icons/svg/8-trolley.svg" alt="#">
+                                    <img src="{% static 'img/icons/svg/8-trolley.svg' %}" alt="#">
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4>ارسال رایگان</h4>
@@ -2828,7 +2808,7 @@
                             </div>
                             <div class="ltn__feature-item ltn__feature-item-8">
                                 <div class="ltn__feature-icon">
-                                    <img src="img/icons/svg/9-money.svg" alt="#">
+                                    <img src="{% static 'img/icons/svg/9-money.svg' %}" alt="#">
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4>15 روز برمی&zwnj;گردد</h4>
@@ -2837,7 +2817,7 @@
                             </div>
                             <div class="ltn__feature-item ltn__feature-item-8">
                                 <div class="ltn__feature-icon">
-                                    <img src="img/icons/svg/10-credit-card.svg" alt="#">
+                                    <img src="{% static 'img/icons/svg/10-credit-card.svg' %}" alt="#">
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4> تسویه حساب ایمن</h4>
@@ -2846,7 +2826,7 @@
                             </div>
                             <div class="ltn__feature-item ltn__feature-item-8">
                                 <div class="ltn__feature-icon">
-                                    <img src="img/icons/svg/11-gift-card.svg" alt="#">
+                                    <img src="{% static 'img/icons/svg/11-gift-card.svg' %}" alt="#">
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4>پیشنهاد و هدیه اینجا</h4>
@@ -2871,7 +2851,7 @@
                                 <h1>خرید لوازم ضد عفونی <br>برای محافظت از عزیزانتان</h1>
                             </div>
                             <div class="btn-wrapper">
-                                <a class="btn btn-effect-3 btn-white" href="shop.html">بزن بریم!<i
+                                <a class="btn btn-effect-3 btn-white" href="../shop.html">بزن بریم!<i
                                         class="icon-left-arrow"></i></a>
                             </div>
                         </div>
@@ -2881,146 +2861,6 @@
         </div>
         <!-- CALL TO ACTION END -->
 
-        <!-- FOOTER AREA START -->
-        <footer class="ltn__footer-area  ">
-            <div class="footer-top-area  section-bg-2 plr--5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-about-widget">
-                                <div class="footer-logo">
-                                    <div class="site-logo">
-                                        <img src="img/logo-2.png" alt="Logo">
-                                    </div>
-                                </div>
-                                <p>لورم ایپسوم متن ساختگی با معنی و مفهوم نامعتبر در راستا بهبود ظاهری متون در پروژه ها
-                                    است.</p>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <div class="footer-address-icon">
-                                                <i class="icon-placeholder"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p>خراسان رضوی،کاشمر</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-address-icon">
-                                                <i class="icon-call"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p><a href="tel:+0123-456789">+0123-456789</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-address-icon">
-                                                <i class="icon-mail"></i>
-                                            </div>
-                                            <div class="footer-address-info">
-                                                <p><a href="mailto:example@example.com">example@example.com</a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__social-media mt-20">
-                                    <ul>
-                                        <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                        <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">شرکت</h4>
-                                <div class="footer-menu">
-                                    <ul>
-                                        <li><a href="about.html">درباره ما</a></li>
-                                        <li><a href="blog.html">وبلاگ</a></li>
-                                        <li><a href="shop.html">همه مصولات</a></li>
-                                        <li><a href="locations.html">نمایندگی ها</a></li>
-                                        <li><a href="faq.html">پرسش های متداول</a></li>
-                                        <li><a href="website/contact.html">ارتباط با ما</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">سرویس ها</h4>
-                                <div class="footer-menu">
-                                    <ul>
-                                        <li><a href="order-tracking.html">رهگیری سفارش</a></li>
-                                        <li><a href="wishlist.html">لیست علاقه مندی ها</a></li>
-                                        <li><a href="login.html">ورود</a></li>
-                                        <li><a href="account.html">حساب کاربری</a></li>
-                                        <li><a href="about.html">قوانین و مقررات</a></li>
-                                        <li><a href="shop.html">تخفیف های ویژه</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-md-6 col-sm-6 col-12">
-                            <div class="footer-widget footer-menu-widget clearfix">
-                                <h4 class="footer-title">لینک های مفید</h4>
-                                <div class="footer-menu">
-                                    <ul>
-                                        <li><a href="login.html">سبد خرید</a></li>
-                                        <li><a href="portfolio.html">نمونه کار ها</a></li>
-                                        <li><a href="service.html">سرویس ها</a></li>
-                                        <li><a href="history.html">سوابق</a></li>
-                                        <li><a href="team.html">تیم</a></li>
-                                        <li><a href="shop.html">فروشگاه</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-12 col-12">
-                            <div class="footer-widget footer-newsletter-widget">
-                                <h4 class="footer-title">خبرنامه</h4>
-                                <p>با عضویت در خبرنامه ما از تمامی آپدیت ها و اخبار ها با خبر باشید.</p>
-                                <div class="footer-newsletter">
-                                    <form action="#">
-                                        <input type="email" name="email" placeholder="ایمیل خود را وارد کنید*">
-                                        <div class="btn-wrapper">
-                                            <button class="theme-btn-1 btn" type="submit"><i
-                                                    class="fas fa-location-arrow"></i></button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <h5 class="mt-30">همراهان ما</h5>
-                                <img src="img/icons/payment-4.png" alt="Payment Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
-                <div class="container-fluid ltn__border-top-2">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <div class="ltn__copyright-design clearfix">
-                                <p>تمامی حقوق برای راستچین و ویکودین محفوظ است <span class="current-year"></span>&copy
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 align-self-center">
-                            <div class="ltn__copyright-menu text-end">
-                                <ul>
-                                    <li><a href="#">پرسش هاس متداول</a></li>
-                                    <li><a href="#">حساب کاربری</a></li>
-                                    <li><a href="#">قوانین و مقررات</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- FOOTER AREA END -->
 
         <!-- MODAL AREA START (Quick View Modal) -->
         <div class="ltn__modal-area ltn__quick-view-modal-area">
@@ -3039,7 +2879,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
                                             <div class="modal-product-img">
-                                                <img src="img/product/4.png" alt="#">
+                                                <img src="{% static 'img/product/4.png' %}" alt="#">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
@@ -3150,16 +2990,16 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="modal-product-img">
-                                                <img src="img/product/1.png" alt="#">
+                                                <img src="{% static 'img/product/1.png' %}" alt="#">
                                             </div>
                                             <div class="modal-product-info">
-                                                <h5><a href="product-details.html">دستگاه فشار سنج مدل L120</a></h5>
+                                                <h5><a href="../product-details.html">دستگاه فشار سنج مدل L120</a></h5>
                                                 <p class="added-cart"><i class="fa fa-check-circle"></i>با موفقیت به سبد
                                                     خرید اضافه شد!</p>
                                                 <div class="btn-wrapper">
-                                                    <a href="cart.html" class="theme-btn-1 btn btn-effect-1">نمایش سبد
+                                                    <a href="../cart.html" class="theme-btn-1 btn btn-effect-1">نمایش سبد
                                                         خرید</a>
-                                                    <a href="checkout.html"
+                                                    <a href="../checkout.html"
                                                         class="theme-btn-2 btn btn-effect-2">پرداخت</a>
                                                 </div>
                                             </div>
@@ -3168,7 +3008,7 @@
                                                 <p>تبریک! 20% تخفیف اولین خرید برای شما اعمال شد!! کد تخفیف یک بار مصرف
                                                     : <br> <b>rtl12360</b></p>
                                                 <div class="payment-method">
-                                                    <img src="img/icons/payment.png" alt="#">
+                                                    <img src="{% static 'img/icons/payment.png' %}" alt="#">
                                                 </div>
                                             </div>
                                         </div>
@@ -3198,14 +3038,14 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="modal-product-img">
-                                                <img src="img/product/7.png" alt="#">
+                                                <img src="{% static 'img/product/7.png' %}" alt="#">
                                             </div>
                                             <div class="modal-product-info">
-                                                <h5><a href="product-details.html">دستگاه فشار سنج مدل L120</a></h5>
+                                                <h5><a href="../product-details.html">دستگاه فشار سنج مدل L120</a></h5>
                                                 <p class="added-cart"><i class="fa fa-check-circle"></i>با موفقیت به
                                                     لیست علاقه مندی ها اضافه شد!</p>
                                                 <div class="btn-wrapper">
-                                                    <a href="wishlist.html" class="theme-btn-1 btn btn-effect-1">نمایش
+                                                    <a href="../wishlist.html" class="theme-btn-1 btn btn-effect-1">نمایش
                                                         لیست علاقه مندی ها</a>
                                                 </div>
                                             </div>
@@ -3214,7 +3054,7 @@
                                                 <p>تبریک! 20% تخفیف اولین خرید برای شما اعمال شد!! کد تخفیف یک بار مصرف
                                                     : <br> <b>rtl12360</b></p>
                                                 <div class="payment-method">
-                                                    <img src="img/icons/payment.png" alt="#">
+                                                    <img src="{% static 'img/icons/payment.png' %}" alt="#">
                                                 </div>
                                             </div>
                                         </div>
@@ -3231,14 +3071,10 @@
     </div>
     <!-- Body main wrapper end -->
 
-    <!-- All JS Plugins -->
-    <script src="js/plugins.js"></script>
-    <!-- Main JS -->
-        <script src="js/main.js"></script>
-    <!-- number farsi JS -->
-    <script src="js/number-farsi.js"></script>
+
 
 </body>
+{% endblock %}
 
 
 <!-- Mirrored from theme.baitimo.ir/vicodin/demos/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Aug 2023 06:40:24 GMT -->

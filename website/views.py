@@ -5,6 +5,14 @@ from django.http import HttpResponseRedirect, HttpResponseNotAllowed
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 
+
+def index_view(request, cat_name=None):
+    #posts = Post.objects.filter(status=1, published_date__lte=timezone.now())
+    #if cat_name:
+     #   posts = posts.filter(category__name=cat_name)
+    #context = {'posts': posts}
+    return render(request, 'website/index.html')
+
 @csrf_protect
 def contact_view(request):
     if request.method == 'POST':
@@ -31,4 +39,4 @@ def newsletter_view(request):
             return HttpResponseRedirect("/")
     form = NewsletterForm()
     context = {'form': form}
-    return render(request, 'index.html', context)
+    return render(request, 'base.html', context)
