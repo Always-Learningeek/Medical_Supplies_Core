@@ -20,6 +20,7 @@ class CustomAuthenticationForm(forms.Form):
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    captcha = CaptchaField()
 
     class Meta:
         model = User

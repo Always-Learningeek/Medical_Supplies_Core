@@ -273,7 +273,8 @@
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
                         <div class="account-login-inner">
-                            <form action="#" class="ltn__form-box contact-form-box">
+                            {% csrf_token %}
+                            <form action="{% url 'accounts:signup' %}" class="ltn__form-box contact-form-box" method="post">
                                 <input type="text" name="firstname" placeholder="نام">
                                 <input type="text" name="lastname" placeholder="نام خانوادگی">
                                 <input type="text" name="email" placeholder="ایمیل*">
@@ -288,6 +289,7 @@
                                     تمامی قوانین و بند های قرارداد را میپذیرم.
                                 </label>
                                 <div class="btn-wrapper">
+                                    {{ form.captcha }}
                                     <button class="theme-btn-1 btn reverse-color btn-block" type="submit">ثبت
                                         نام</button>
                                 </div>
@@ -297,7 +299,7 @@
                                 <p><a href="#">قوانین و بند های قرارداد &nbsp; &nbsp; | &nbsp; &nbsp; قوانین مربوط به
                                         خریدار و فروشنده</a></p>
                                 <div class="go-to-btn mt-50">
-                                    <a href="login.html">قبلا ثبت نام کرده اید؟ورود</a>
+                                    <a href="{% url 'accounts:login' %}">قبلا ثبت نام کرده اید؟ورود</a>
                                 </div>
                             </div>
                         </div>
