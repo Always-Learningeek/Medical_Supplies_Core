@@ -273,13 +273,12 @@
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
                         <div class="account-login-inner">
-                            {% csrf_token %}
                             <form action="{% url 'accounts:signup' %}" class="ltn__form-box contact-form-box" method="post">
-                                <input type="text" name="firstname" placeholder="نام">
-                                <input type="text" name="lastname" placeholder="نام خانوادگی">
+                                {% csrf_token %}
+                                <input type="text" name="username" placeholder="نام کاربری">
                                 <input type="text" name="email" placeholder="ایمیل*">
-                                <input type="password" name="password" placeholder="رمز عبور*">
-                                <input type="password" name="confirmpassword" placeholder="تکرار رمز عبور*">
+                                <input type="password" name="password1" placeholder="رمز عبور*">
+                                <input type="password" name="password2" placeholder="تکرار رمز عبور*">
                                 <label class="checkbox-inline">
                                     <input type="checkbox" value="">
                                     تمامی قوانین مربوط به خریدار و فروشنده را میپذیرم
@@ -290,7 +289,7 @@
                                 </label>
                                 <div class="btn-wrapper">
                                     {{ form.captcha }}
-                                    <button class="theme-btn-1 btn reverse-color btn-block" type="submit">ثبت
+                                    <button type="submit" class="theme-btn-1 btn reverse-color btn-block" type="submit">ثبت
                                         نام</button>
                                 </div>
                             </form>
