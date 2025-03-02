@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_jalali.db import models as jmodels
 
 
 class Category(models.Model):
@@ -18,9 +19,9 @@ class Post (models.Model):
     #tags = models.CharField(max_length=255)
     counted_views = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
-    published_date = models.DateTimeField(null=True)
-    created_date = models.DateTimeField(auto_now_add=True, null=True)
-    updated_date = models.DateTimeField(auto_now=True, null=True)
+    published_date = jmodels.jDateTimeField(null=True)
+    created_date = jmodels.jDateTimeField(auto_now_add=True, null=True)
+    updated_date = jmodels.jDateTimeField(auto_now=True, null=True)
 
     class Meta:
         ordering = ['-created_date']

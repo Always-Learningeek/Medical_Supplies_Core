@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load blog_tags %}
+{% load jformat %}
 <!doctype html>
 <html class="no-js" lang="fa">
 
@@ -281,34 +282,33 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
+                                    <h3 class="ltn__blog-title"><a href="{% url 'blog:blog-single' pid=p.id %}">
                                         {{ p.title }}
                                         </a></h3>
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="far fa-eye"></i>310 بازدید</a>
+                                                <a href="#"><i class="far fa-eye"></i>{{ p.counted_views }}</a>
                                             </li>
                                             <li>
                                                 <a href="#"><i class="far fa-comments"></i>76 نظر</a>
                                             </li>
                                             <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>15 شهریور 1401
+                                                <i class="far fa-calendar-alt"></i><a>{{p.published_date|date:"d m Y"}}</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <p>{{ p.content }}</p>
+                                    <p>{{ p.content|truncatewords:70 }}</p>
                                     <div class="ltn__blog-meta-btn">
                                         <div class="ltn__blog-meta">
                                             <ul>
                                                 <li class="ltn__blog-author">
-                                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}"alt="#">توسط نگین
-                                                        جهانبخش</a>
+                                                    <a href="{% url 'blog:author' author_username=p.author.username %}"><img src="{% static 'img/blog/author.jpg' %}"alt="#">{{ p.author }}</a>
                                                 </li>
                                             </ul>
                                         </div>
                                                                 <div class="ltn__blog-btn">
-                                            <a href="blog-details.html">
+                                            <a href="{% url 'blog:blog-single' pid=p.id %}">
                                                 ادامه مطلب
                                                 <i class="fas fa-arrow-left"></i>
                                             </a>

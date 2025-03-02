@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load blog_tags %}
 <!doctype html>
 <html class="no-js" lang="fa">
 
@@ -245,7 +246,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ltn__breadcrumb-inner">
-                            <h1 class="page-title">خواص باور نکردنی عسل با بشناسید!</h1>
+                            <h1 class="page-title">{{ post.title }}</h1>
                             <div class="ltn__breadcrumb-list">
                                 <ul>
                                     <li><a href="index.html"><span class="ltn__secondary-color"><i
@@ -275,15 +276,15 @@
                                     </ul>
                                 </div>
                                 <h2 class="ltn__blog-title">
-                                    خواص باور نکردنی عسل را بشناسید
+                                    {{ post.title }}
                                 </h2>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-author">
-                                            <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#">توسط : محسن حاجیلو</a>
+                                            <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#">{{ post.author.username }}</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>08 مهر 1401
+                                            <i class="far fa-calendar-alt"></i>{{ post.published_date|date:"d m Y" }}
                                         </li>
                                         <li>
                                             <a href="#"><i class="far fa-comments"></i>35 نظر</a>
@@ -768,13 +769,8 @@
                             </div>
                             <!-- Menu Widget (Category) -->
                             <div class="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
-                                <h4 class="ltn__widget-title ltn__widget-title-border-2">دسته بندی ها</h4>
                                 <ul>
-                                    <li><a href="#">پزشکی <span>(26)</span></a></li>
-                                    <li><a href="#">فناوری <span>(30)</span></a></li>
-                                    <li><a href="#">طب سنتی <span>(71)</span></a></li>
-                                    <li><a href="#"> وبسایت<span>(56)</span></a></li>
-                                    <li><a href="#"> عمومی<span>(60)</span></a></li>
+                                    {% postcategories %}
                                 </ul>
                             </div>
                             <!-- Popular Post Widget -->
