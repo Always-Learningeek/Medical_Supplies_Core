@@ -461,12 +461,16 @@
                             <!-- prev-next-btn -->
                             <div class="ltn__prev-next-btn row mb-50">
                                 <div class="blog-prev col-lg-6">
-                                    <h6>مطب قبلی</h6>
-                                    <h3 class="ltn__blog-title"><a href="#">با این راهکار ها شبا بهتر بخوابید!</a></h3>
+                                    {% if previous_post %}
+                                        <h6>مطب قبلی</h6>
+                                        <h3 class="ltn__blog-title"><a href="{% url "blog:blog-single" previous_post.id %}">{{ previous_post.title }}</a></h3>
+                                    {% endif %}
                                 </div>
                                 <div class="blog-prev blog-next text-right text-end col-lg-6">
-                                    <h6>مطب بعدی</h6>
-                                    <h3 class="ltn__blog-title"><a href="#">راه های جلوگیری از پوسیدگی دندان</a></h3>
+                                    {% if next_post %}
+                                        <h6>مطب بعدی</h6>
+                                        <h3 class="ltn__blog-title"><a href="{% url "blog:blog-single" next_post.id %}">{{ previous_post.title }}</a></h3>
+                                    {% endif %}
                                 </div>
                             </div>
                             <hr>
