@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load blog_tags %}
 <!doctype html>
 <html class="no-js" lang="fa">
 
@@ -263,130 +264,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
+                        {% for p in posts %}
                         <div class="ltn__blog-list-wrap">
-                            <!-- Blog Item -->
-                            <div class="ltn__blog-item ltn__blog-item-5">
-                                <div class="ltn__blog-img">
-                                    <a href="blog-details.html"><img src="{% static 'img/blog/31.jpg' %}"alt="Image"></a>
-                                </div>
-                                <div class="ltn__blog-brief">
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">پزشکی</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            رفع سردرد با 7 راهکار تضمینی!
-                                        </a></h3>
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i>232 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>23 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>15 مهر 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
-                                        و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                        جامعه</p>
-                                    <div class="ltn__blog-meta-btn">
-                                        {% for p in posts %}
-                                        <div class="ltn__blog-meta">
-                                            <ul>
-                                                <li class="ltn__blog-author">
-                                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}"alt="#">توسط ADMIN</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                                                <div class="ltn__blog-btn">
-                                            <a href="blog-single.html">
-                                                ادامه مطلب
-                                                <i class="fas fa-arrow-left"></i>
-                                            </a>
-                                        </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Item (Video) -->
-                            <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-video">
-                                <div class="ltn__video-img">
-                                    <img src="{% static 'img/blog/32.jpg' %}"alt="video popup bg image">
-                                    <a class="ltn__video-icon-2 ltn__secondary-bg ltn__video-icon-2-border---"
-                                        href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
-                                        data-rel="lightcase:myCollection">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-                                <div class="ltn__blog-brief">
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">طب سنتی</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            خواص باور نکردنی عسل!
-                                        </a></h3>
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i>732 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>150 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>10 شهریور 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
-                                        و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                        جامعه</p>
-                                    <div class="ltn__blog-meta-btn">
-                                        {% for p in posts %}
-                                        <div class="ltn__blog-meta">
-                                            <ul>
-                                                <li class="ltn__blog-author">
-                                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}"alt="#">توسط زهرا
-                                                        توسلی</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                                                <div class="ltn__blog-btn">
-                                            <a href="{% url 'blog:blog-single' pid=p.id %}">
-                                                ادامه مطلب
-                                                <i class="fas fa-arrow-left"></i>
-                                            </a>
-                                        </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Blog Item (Gallery) -->
                             <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-gallery">
                                 <div class="ltn__blog-gallery-active slick-arrow-1 slick-arrow-1-inner">
                                     <div class="ltn__blog-gallery-item">
-                                        <a href="blog-details.html"><img src="{% static 'img/blog/33.jpg' %}"alt="Image"></a>
-                                    </div>
-                                    <div class="ltn__blog-gallery-item">
-                                        <a href="blog-details.html"><img src="{% static 'img/blog/34.jpg' %}"alt="Image"></a>
-                                    </div>
-                                    <div class="ltn__blog-gallery-item">
-                                        <a href="blog-details.html"><img src="{% static 'img/blog/31.jpg' %}"alt="Image"></a>
+                                        <img src="{{ p.image.url }}" alt="Image">
                                     </div>
                                 </div>
                                 <div class="ltn__blog-brief">
@@ -398,7 +282,7 @@
                                         </ul>
                                     </div>
                                     <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            23 راهکار برای کُشتن یبوست!
+                                        {{ p.title }}
                                         </a></h3>
                                     <div class="ltn__blog-meta">
                                         <ul>
@@ -413,11 +297,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
-                                        و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                        جامعه</p>
+                                    <p>{{ p.content }}</p>
                                     <div class="ltn__blog-meta-btn">
                                         <div class="ltn__blog-meta">
                                             <ul>
@@ -436,161 +316,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Blog Item (Audio) -->
-                            <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-audio">
-                                <div class="post-audio embed-responsive embed-responsive-16by9">
-                                    <iframe
-                                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/837045328&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-
-                                </div>
-                                <div class="ltn__blog-brief">
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">فناوری</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            سه راهکار برای افزایش سرعت ویندوز 11 که تاحالا ندیده اید!
-                                        </a></h3>
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i>932 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>264 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>23 تیر 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
-                                        و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                        جامعه</p>
-                                    <div class="ltn__blog-meta-btn">
-                                        <div class="ltn__blog-meta">
-                                            <ul>
-                                                <li class="ltn__blog-author">
-                                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}"alt="#">توسط حمید
-                                                        فریدون</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                                                <div class="ltn__blog-btn">
-                                            <a href="blog-details.html">
-                                                ادامه مطلب
-                                                <i class="fas fa-arrow-left"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Item (No Image) -->
-                            <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-no-image">
-                                <div class="ltn__blog-brief">
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">عمومی</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            برترین سریال های کمدی خارجی با بازی بازیگران معروف دنیا
-                                        </a></h3>
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i>1،132 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>361 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>06 خرداد 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                                        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
-                                        و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                        جامعه</p>
-                                    <div class="ltn__blog-meta-btn">
-                                        <div class="ltn__blog-meta">
-                                            <ul>
-                                                <li class="ltn__blog-author">
-                                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}"alt="#">توسط ADMIN</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                                                <div class="ltn__blog-btn">
-                                            <a href="blog-details.html">
-                                                ادامه مطلب
-                                                <i class="fas fa-arrow-left"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Item (Quote) -->
-                            <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-quote bg-image bg-overlay-theme-90"
-                                data-bs-bg="img/blog/3.jpg">
-                                <div class="ltn__blog-brief">
-                                    <blockquote>
-                                        <a href="blog-details.html">
-                                            با این چند راهکار شبا راحت بخواب!
-                                        </a>
-                                    </blockquote>
-                                    <div class="ltn__blog-meta mb-0">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i> 611 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>35 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>11 خرداد 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Item (Background Image) -->
-                            <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-bg-image bg-image bg-overlay-white-90"
-                                data-bs-bg="img/blog/2.jpg">
-                                <div class="ltn__blog-brief">
-                                    <div class="ltn__blog-meta">
-                                        <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">فناوری</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3 class="ltn__blog-title"><a href="blog-details.html">
-                                            متاورس، جدیدترین تکنولوژی خیره کننده فیسبوک
-                                        </a></h3>
-                                    <div class="ltn__blog-meta mb-0">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="far fa-eye"></i>410 بازدید</a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="far fa-comments"></i>230 نظر</a>
-                                            </li>
-                                            <li class="ltn__blog-date">
-                                                <i class="far fa-calendar-alt"></i>29 فروردین 1401
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        {% endfor %}
                             <!--  -->
                         </div>
                         <div class="row">
@@ -739,13 +465,8 @@
                             </div>
                             <!-- Menu Widget (Category) -->
                             <div class="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
-                                <h4 class="ltn__widget-title ltn__widget-title-border-2">دسته بندی ها</h4>
                                 <ul>
-                                    <li><a href="#">پزشکی <span>(26)</span></a></li>
-                                    <li><a href="#">فناوری <span>(30)</span></a></li>
-                                    <li><a href="#">طب سنتی <span>(71)</span></a></li>
-                                    <li><a href="#"> وبسایت<span>(56)</span></a></li>
-                                    <li><a href="#"> عمومی<span>(60)</span></a></li>
+                                {% postcategories %}
                                 </ul>
                             </div>
                             <!-- Popular Post Widget -->
