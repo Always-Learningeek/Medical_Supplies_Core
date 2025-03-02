@@ -469,7 +469,7 @@
                                 <div class="blog-prev blog-next text-right text-end col-lg-6">
                                     {% if next_post %}
                                         <h6>مطب بعدی</h6>
-                                        <h3 class="ltn__blog-title"><a href="{% url "blog:blog-single" next_post.id %}">{{ previous_post.title }}</a></h3>
+                                        <h3 class="ltn__blog-title"><a href="{% url "blog:blog-single" next_post.id %}">{{ next_post.title }}</a></h3>
                                     {% endif %}
                                 </div>
                             </div>
