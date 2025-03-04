@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="widget ltn__search-widget">
+    <h4 class="ltn__widget-title ltn__widget-title-border-2">جست و جو در بین وبلاگ</h4>
+    <form class="search-form" action="{% url 'blog:search' %}" method="get">
+        <input type="text" name="q" placeholder="کلمه مورد نظر را جست و جو کنید...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+</div>
