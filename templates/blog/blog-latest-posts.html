@@ -1,0 +1,29 @@
+
+{% load static %}
+
+<div class="widget ltn__popular-post-widget">
+    <h4 class="ltn__widget-title ltn__widget-title-border-2">آخرین مطالب وبلاگ</h4>
+    {% for p in posts %}
+    <ul>
+        <li>
+            <div class="popular-post-widget-item clearfix">
+                <div class="popular-post-widget-img">
+                    <a href="{% url "blog:blog-single" pid=p.id %}"><img src="{{ p.image.url }}" alt="#"></a>
+                </div>
+                <div class="popular-post-widget-brief">
+                    <h6><a href="{% url "blog:blog-single" pid=p.id %}">
+                        {{ p.title }}
+                        </a></h6>
+                    <div class="ltn__blog-meta">
+                        <ul>
+                            <li class="ltn__blog-date">
+                                <a href=""><i class="far fa-calendar-alt"></i>{{ p.published_date|date:"d m Y" }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    {% endfor %}
+</div>
