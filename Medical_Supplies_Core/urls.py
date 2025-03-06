@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('website.urls')),
     path('blog/', include('blog.urls')),
     path('captcha/', include('captcha.urls')),
+    path("accounts/", include('django.contrib.auth.urls')),
 
 ]
 

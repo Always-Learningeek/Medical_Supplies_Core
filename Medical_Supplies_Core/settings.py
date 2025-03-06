@@ -139,3 +139,5 @@ JALALI_SETTINGS = {
         ]
     },
 }
+
+
