@@ -1,5 +1,7 @@
 asgiref==3.8.1
 Django==5.1.6
+django-appconf==1.1.0
+django-compressor==4.5.1
 django-countries==7.6.1
 django-jalali==7.3.0
 django-phonenumber-field==8.0.0
@@ -11,6 +13,8 @@ jdatetime==5.2.0
 phonenumbers==8.13.55
 pillow==11.1.0
 psycopg2-binary==2.9.10
+rcssmin==1.1.2
+rjsmin==1.2.2
 sqlparse==0.5.3
 typing_extensions==4.12.2
 tzdata==2025.1

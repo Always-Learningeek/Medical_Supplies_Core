@@ -34,7 +34,9 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'website.apps.WebsiteConfig',
     'phonenumber_field',
-    'captcha'
+    'captcha',
+    "compressor",
+
 ]
 
 MIDDLEWARE = [
@@ -140,4 +142,8 @@ JALALI_SETTINGS = {
     },
 }
 
-
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
