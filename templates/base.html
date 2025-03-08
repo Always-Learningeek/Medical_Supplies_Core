@@ -1,4 +1,6 @@
 {% load static %}
+{% load compress %}
+
 <!doctype html>
 <body class="no-js" lang="fa">
 
@@ -15,13 +17,15 @@
     <!-- Place favicon.png in the root directory -->
     <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
     <!-- Font Icons css -->
-    <link rel="stylesheet" href="{% static 'css/font-icons.css' %}">
-    <!-- plugins css -->
-    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Responsive css -->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/font-icons.css' %}">
+        <!-- plugins css -->
+        <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- Responsive css -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    {% endcompress %}
 </head>
 
 
@@ -94,7 +98,7 @@
             <div class="row">
                 <div class="col">
                     <div class="site-logo">
-                        <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                        <a href="{% url "website:index" %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
                     </div>
                 </div>
                 <div class="col header-contact-serarch-column d-none d-xl-block">
@@ -169,7 +173,7 @@
                                 <div class="ltn__drop-menu user-menu">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="icon-user"></i></a>
+                                            <a href="{% url "accounts:login" %}"><i class="icon-user"></i></a>
                                             <ul>
                                                 {% if request.user.is_authenticated %}
                                                     <li><a href="{% url 'accounts:login' %}">{{ request.user.username }}</a></li>
@@ -177,8 +181,6 @@
                                                 {% else %}
                                                     <li><a href="{% url 'accounts:login' %}">ورود</a></li>
                                                     <li><a href="{% url 'accounts:signup' %}">ثبت نام</a></li>
-                                                    <li><a href="../account.html">حساب کاربری</a></li>
-                                                    <li><a href="../wishlist.html">لیست علاقه مندی ها</a></li>
                                                 {% endif %}
                                             </ul>
                                         </li>
@@ -562,29 +564,7 @@
                                         <li class="menu-icon"><a href="{% url "website:about" %}">درباره ما</a>
                                         </li>
                                         <li class="menu-icon"><a href="#">فروشگاه</a>
-                                            <ul>
-                                                <li><a href="../shop.html">فروشگاه</a></li>
-                                                <li><a href="../shop-grid.html">فروشگاه شبکه ای</a></li>
-                                                <li><a href="../shop-left-sidebar.html">فروشگاه با سایدبار چپ</a>
-                                                </li>
-                                                <li><a href="../shop-right-sidebar.html">فروشگاه با سایدبار
-                                                        راست</a></li>
-                                                <li><a href="../product-details.html">جزئیات محصول</a></li>
-                                                <li><a href="#">صفحات کاربری<span
-                                                            class="float-right">>></span></a>
-                                                    <ul>
-                                                        <li><a href="../cart.html">سبد خرید</a></li>
-                                                        <li><a href="../wishlist.html">علاقه مندی ها</a></li>
-                                                        <li><a href="../checkout.html">خرید</a></li>
-                                                        <li><a href="../order-tracking.html">رهگیری سفارش</a></li>
-                                                        <li><a href="../account.html">حساب کاربری</a></li>
-                                                        <li><a href="../login.html">ورود</a></li>
-                                                        <li><a href="../register.html">ثبت نام</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
                                         </li>
-
                                         <li class="menu-icon"><a href="{% url 'blog:blog-home' %}">وبلاگ</a>
                                         </li>
                                         <li><a href="{% url 'website:contact' %}">ارتباط با ما</a></li>
@@ -757,13 +737,14 @@
 </footer>
 <!-- FOOTER AREA END -->
 
-
-<!-- All JS Plugins -->
-<script src="{% static 'js/plugins.js' %}"></script>
-<!-- Main JS -->
-    <script src="{% static 'js/main.js' %}"></script>
-<!-- number farsi JS -->
-<script src="{% static 'js/number-farsi.js' %}"></script>
+{% compress js %}
+    <!-- All JS Plugins -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Main JS -->
+        <script src="{% static 'js/main.js' %}"></script>
+    <!-- number farsi JS -->
+    <script src="{% static 'js/number-farsi.js' %}"></script>
+{% endcompress %}
 
 </body>
 </html>

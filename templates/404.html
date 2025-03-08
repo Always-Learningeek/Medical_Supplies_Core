@@ -269,11 +269,11 @@
                                 <img src="{% static 'img/others/error-1.png' %}" alt="#">
                             </div>
                             <h1 class="error-404-title d-none">404</h1>
-                            <h2>صفحه پیدا نشد!</h2>
+                            <h2>این بخش در حال حاضر در دسترس نیست و در حال توسعه هست، بزودی در دسترس شما قرار خواهد گرفت.با تشکر</h2>
                             <!-- <h3>Oops! Looks like something going rong</h3> -->
                             <p>اوپس! صفحه ای دنبالشی پیدا نشد،شاید آدرس اشتباهی اومدی.</p>
                             <div class="btn-wrapper">
-                                <a href="website/index.html" class="btn btn-transparent">
+                                <a href="{% url "website:index" %}" class="btn btn-transparent">
                                     برو به خانه
                                     <i class="fas fa-long-arrow-alt-left"></i>
                                 </a>
