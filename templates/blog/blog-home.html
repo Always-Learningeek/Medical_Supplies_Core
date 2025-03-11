@@ -303,7 +303,7 @@
                                         <div class="ltn__blog-meta">
                                             <ul>
                                                 <li class="ltn__blog-author">
-                                                    <a href="{% url 'blog:author' author_username=p.author.username %}"><img src="{% static 'img/blog/author.jpg' %}"alt="#">{{ p.author }}</a>
+                                                    <a href="{% url 'blog:author' author_username=p.author.user.username %}"><img src="{{ p.author.profile_picture.url }}" alt="#">{{ p.author.user.username }}</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -345,8 +345,6 @@
                     </div>
                     <div class="col-lg-4">
                         <aside class="sidebar-area blog-sidebar ltn__right-sidebar">
-                            <!-- Author Widget -->
-                            {% include "blog/blog-writer.html" %}
                             <!-- Search Widget -->
                             {% include "blog/blog-search.html" %}
                             <!-- Top Rated Product Widget -->

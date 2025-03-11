@@ -281,7 +281,7 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-author">
-                                            <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#">{{ post.author.username }}</a>
+                                            <a href="{{ post.author.profile_picture.url }}"><img src="{{ post.author.profile_picture.url }}" alt="#">{{ post.author.user.username }}</a>
                                         </li>
                                         <li class="ltn__blog-date">
                                             <i class="far fa-calendar-alt"></i>{{ post.published_date|date:"d m Y" }}
@@ -348,18 +348,12 @@
                             <div class="ltn__comment-area mb-50">
                                 <div class="ltn-author-introducing clearfix">
                                     <div class="author-img">
-                                        <img src="{% static 'img/blog/author.jpg' %}" alt="Author Image">
+                                        <img src="{{ post.author.profile_picture.url }}" alt="Author Image">
                                     </div>
                                     <div class="author-info">
                                         <h6>نوشته شده توسط</h6>
-                                        <h2>{{ post.author }}</h2>
-                                        <p>
-                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
-                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-                                            لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
-                                            بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                            آینده، شناخت فراوان جامعه و متخصصان را می طلبد.
-                                        </p>
+                                        <h2>{{ post.author.user.username }}</h2>
+                                        <p>{{ post.author.description }}</p>
                                     </div>
                                 </div>
                                 <h4 class="title-2">3 نظر</h4>

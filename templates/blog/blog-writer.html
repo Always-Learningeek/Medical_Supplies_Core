@@ -2,8 +2,8 @@
 
 <div class="widget ltn__author-widget">
     <div class="ltn__author-widget-inner text-center">
-        <img src="{% static 'img/team/4.jpg' %}" alt="Image">
-        <h5>{{ post.author }}</h5>
+        <img src="{{ post.author.profile_picture.url }}" alt="Image">
+        <h5>{{ post.author.user.username }}</h5>
         <small>گردشگر، عکاس</small>
         <div class="product-ratting">
             <ul>
@@ -15,10 +15,7 @@
                 <li class="review-total"> <a href="#"> ( 9 نظر )</a></li>
             </ul>
         </div>
-        <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-        </p>
+        <p>{{ post.author.description }}</p>
         <div class="ltn__social-media">
             <ul>
                 <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
