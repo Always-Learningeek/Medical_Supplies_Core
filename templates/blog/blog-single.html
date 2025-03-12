@@ -384,25 +384,28 @@
                         <hr>
                         <!-- comment-reply -->
                         <div class="ltn__comment-reply-area ltn__form-box mb-30">
-                            <form action="#">
+                            <form action="{% url "blog:blog-single" pid=post.id %}" method="post">
+                                {% csrf_token %}
                                 <h4 class="title-2">ارسال نظر</h4>
                                 <div class="mb-30">
                                 </div>
+                                <input type="hidden" name="post" value="{{post.id}}">
                                 <div class="input-item input-item-textarea ltn__custom-icon">
-                                    <textarea placeholder="نظر خود را بنویسید..."></textarea>
+                                    <textarea name="message" placeholder="نظر خود را بنویسید..."></textarea>
                                 </div>
                                 <div class="input-item input-item-name ltn__custom-icon">
-                                    <input type="text" placeholder="نام ....">
+                                    <input type="text" name="name" placeholder="نام ....">
                                 </div>
                                 <div class="input-item input-item-email ltn__custom-icon">
-                                    <input type="email" placeholder="ایمیل...">
+                                    <input type="email" name="email" placeholder="ایمیل...">
                                 </div>
                                 <div class="input-item input-item-website ltn__custom-icon">
-                                    <input type="text" name="website" placeholder="آدرس سایت...">
+                                    <input type="text" name="phone_number" placeholder="شماره تماس را وارد کنید">
                                 </div>
                                 <label class="mb-0"><input type="checkbox" name="agree"> ذخیره ایمیل،نام و آدرس وبسایت
                                     برای ارسال نظر در آینده</label>
                                 <div class="btn-wrapper">
+                                    {{ form.captcha }}
                                     <button class="btn theme-btn-1 btn-effect-1 text-uppercase"
                                         type="submit">ارسال</button>
                                 </div>

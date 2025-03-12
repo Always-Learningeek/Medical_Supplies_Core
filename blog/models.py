@@ -41,7 +41,7 @@ class Comment(models.Model):
     phone_number = PhoneNumberField(null=False, blank=True)
     subject = models.TextField(max_length=255, null=True, blank=True)
     message = models.TextField()
-    approach = models.BooleanField(default=True)
+    approach = models.BooleanField(default=False)
     published_date = jmodels.jDateTimeField(null=True)
     created_date = jmodels.jDateTimeField(auto_now_add=True, null=True)
     updated_date = jmodels.jDateTimeField(auto_now=True, null=True)
