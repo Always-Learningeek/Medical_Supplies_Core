@@ -250,7 +250,7 @@
                             <h1 class="page-title">{{ post.title }}</h1>
                             <div class="ltn__breadcrumb-list">
                                 <ul>
-                                    <li><a href="index.html"><span class="ltn__secondary-color"><i
+                                    <li><a href="{% url "website:index" %}"><span class="ltn__secondary-color"><i
                                                     class="fas fa-home"></i></span> خانه</a></li>
                                     <li>جزئیات مطلب</li>
                                 </ul>
@@ -290,7 +290,7 @@
                                             <i class="far fa-calendar-alt"></i>{{ post.published_date|date:"d m Y" }}
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 نظر</a>
+                                            <a href="#"><i class="far fa-comments"></i> {{ comments|length }}</a>
                                         </li>
                                     </ul>
                                 </div>
