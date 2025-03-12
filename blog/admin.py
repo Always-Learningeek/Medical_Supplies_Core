@@ -12,3 +12,4 @@ class PostAdmin(admin.ModelAdmin):
     empty_value_display = '-empty-'
 
 admin.site.register(Category)
+admin.site.register(Comment)

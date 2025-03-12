@@ -277,9 +277,11 @@
                                 <div class="ltn__blog-brief">
                                     <div class="ltn__blog-meta">
                                         <ul>
-                                            <li class="ltn__blog-category">
-                                                <a href="#">طب سنتی</a>
-                                            </li>
+                                             {% for cat in p.category.all %}
+                                                <li class="ltn__blog-category">
+                                                    <a href="{% url "blog:category" cat_name=cat.name %}">{{ cat.name }}</a>
+                                                </li>
+                                             {% endfor %}
                                         </ul>
                                     </div>
                                     <h3 class="ltn__blog-title"><a href="{% url 'blog:blog-single' pid=p.id %}">

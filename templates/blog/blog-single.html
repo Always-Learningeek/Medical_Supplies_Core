@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load blog_tags %}
+
 <!doctype html>
 <html class="no-js" lang="fa">
 
@@ -270,9 +271,11 @@
                             <div class="ltn__page-details-inner ltn__blog-details-inner">
                                 <div class="ltn__blog-meta">
                                     <ul>
-                                        <li class="ltn__blog-category">
-                                            <a href="#">طب سنتی</a>
-                                        </li>
+                                        {% for cat in post.category.all %}
+                                            <li class="ltn__blog-category">
+                                                <a href="{% url "blog:category" cat_name=cat.name %}">{{cat.name}}</a>
+                                            </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                                 <h2 class="ltn__blog-title">
@@ -356,77 +359,26 @@
                                         <p>{{ post.author.description }}</p>
                                     </div>
                                 </div>
-                                <h4 class="title-2">3 نظر</h4>
+                                <h4 class="title-2">نظرات</h4>
                                 <div class="ltn__comment-inner">
-                                    <ul>
-                                        <li>
-                                            <div class="ltn__comment-item clearfix">
-                                                <div class="ltn__commenter-img">
-                                                    <img src="{% static 'img/testimonial/1.jpg' %}" alt="Image">
-                                                </div>
-                                                <div class="ltn__commenter-comment">
-                                                    <h6><a href="#">بهروز عبدالهی</a></h6>
-                                                    <span class="comment-date">11 مهر 1401</span>
-                                                    <p>
-                                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                        استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                                                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-                                                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-                                                        کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                                        جامعه و متخصصان را می طلبد.
-                                                    </p>
-                                                    <a href="#" class="ltn__comment-reply-btn"><i
-                                                            class="icon-reply-1"></i>پاسخ</a>
-                                                </div>
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-img">
-                                                            <img src="{% static 'img/testimonial/3.jpg' %}" alt="Image">
-                                                        </div>
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6><a href="#">پشتیبانی ویکودین</a></h6>
-                                                            <span class="comment-date">14 مهر 1401</span>
-                                                            <p>
-                                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                                                                چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
-                                                                بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-                                                                برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
-                                                                هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
-                                                                و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
-                                                                متخصصان را می طلبد.
-                                                            </p>
-                                                            <a href="#" class="ltn__comment-reply-btn"><i
-                                                                    class="icon-reply-1"></i>پاسخ</a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                    {% for comment in comments %}
+                                        <div class="ltn__commenter-img">
+                                            <img src="{{ comment.profile_image.url }}" alt="Image">
+                                        </div>
                                         <ul>
-                                            <div class="ltn__comment-item clearfix">
-                                                <div class="ltn__commenter-img">
-                                                    <img src="{% static 'img/testimonial/4.jpg' %}" alt="Image">
+                                            <li>
+                                                <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6><a href="#">{{ comment.name }}</a></h6>
+                                                            <span class="comment-date">{{ comment.published_date|date:"d m Y" }}</span>
+                                                            <p>{{ comment.message }}</p>
+                                                            <a href="#" class="ltn__comment-reply-btn"><i class="icon-reply-1"></i>پاسخ</a>
+                                                        </div>
                                                 </div>
-                                                <div class="ltn__commenter-comment">
-                                                    <h6><a href="#">لیلا حمیدی</a></h6>
-                                                    <span class="comment-date">03 آبان 1401</span>
-                                                    <p>
-                                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                        استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                                                        در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-                                                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-                                                        کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                                                        جامعه و متخصصان را می طلبد.
-                                                    </p>
-                                                    <a href="#" class="ltn__comment-reply-btn"><i
-                                                            class="icon-reply-1"></i>پاسخ</a>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </li>
-                                </ul>
+                                            </li>
+                                        </ul>
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                         <hr>

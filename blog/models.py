@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django_jalali.db import models as jmodels
-
 from accounts.models import CustomUser
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Category(models.Model):
@@ -32,3 +32,20 @@ class Post (models.Model):
 
     def __str__(self):
         return f"{self.title}-{self.id}"
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE, null=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=150, null=True, blank=True)
+    phone_number = PhoneNumberField(null=False, blank=True)
+    subject = models.TextField(max_length=255, null=True, blank=True)
+    message = models.TextField()
+    approach = models.BooleanField(default=True)
+    published_date = jmodels.jDateTimeField(null=True)
+    created_date = jmodels.jDateTimeField(auto_now_add=True, null=True)
+    updated_date = jmodels.jDateTimeField(auto_now=True, null=True)
+    profile_image = models.ImageField(upload_to='profile_image_commenter/', default='profile_image_commenter/default.png')
+
+    def __str__(self):
+        return f"{self.name}"

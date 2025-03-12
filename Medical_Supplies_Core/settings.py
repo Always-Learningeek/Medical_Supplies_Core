@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'phonenumber_field',
     'captcha',
-    "compressor",
+    'compressor',
+    'django.contrib.humanize',
 
 ]
 
