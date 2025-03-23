@@ -46,3 +46,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'youremail'
 EMAIL_HOST_PASSWORD = 'passwordapp'
 
+SITE_ID = 2
