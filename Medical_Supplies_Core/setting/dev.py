@@ -1,3 +1,5 @@
+from robots.apps import RobotsConfig
+
 from Medical_Supplies_Core.settings import *
 
 
@@ -46,4 +48,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'youremail'
 EMAIL_HOST_PASSWORD = 'passwordapp'
 
+#site framework
 SITE_ID = 2
+
+#robots
+ROBOTS_USE_HOST = False
+ROBOTS_USE_SITEMAP = False
