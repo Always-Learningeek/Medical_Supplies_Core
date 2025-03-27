@@ -36,7 +36,8 @@ def blog_single(request, pid):
     post = get_object_or_404(posts, pk=pid)
     post.counted_views += 1
     post.save()
-    comments = Comment.objects.filter(post=post.id).order_by('-created_date')
+    comments = Comment.objects.filter(post=post.id, published_date__lte=timezone.now(),
+                                      approach=True).order_by('-created_date')
     form = CommentForm()
     previous_post = posts.filter(id__lt=post.pk).order_by('-pk').first()
     next_post = posts.filter(id__gt=post.pk).order_by('pk').first()

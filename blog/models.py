@@ -46,7 +46,7 @@ class Comment(models.Model):
     subject = models.TextField(max_length=255, null=True, blank=True)
     message = models.TextField()
     approach = models.BooleanField(default=False)
-    published_date = jmodels.jDateTimeField(null=True)
+    published_date = jmodels.jDateTimeField(null=True, auto_now_add=True)
     created_date = jmodels.jDateTimeField(auto_now_add=True, null=True)
     updated_date = jmodels.jDateTimeField(auto_now=True, null=True)
     profile_image = models.ImageField(upload_to='profile_image_commenter/', default='profile_image_commenter/default.png')
