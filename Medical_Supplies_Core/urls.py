@@ -41,6 +41,7 @@ urlpatterns = [
          name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', include('robots.urls'), name='robots'),
     path('__debug__/', include(debug_toolbar.urls)),
+    path('product/', include('product.urls')),
 ]
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 
-COMING_SOON_MODE = True  # برای فعال یا غیرفعال کردن حالت
+COMING_SOON_MODE = False  # برای فعال یا غیرفعال کردن حالت
 
 class ComingSoonMiddleware:
     def __init__(self, get_response):
